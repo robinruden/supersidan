@@ -1,6 +1,7 @@
 import NavBar from "../components/Navbar.jsx";
+import { Outlet } from "react-router-dom";
 
-export default function Layout({ children }) {
+export default function Layout() {
   return (
     <div className="page">
       <header>
@@ -8,7 +9,7 @@ export default function Layout({ children }) {
       </header>
 
       <main className="main-content">
-        {children}
+        <Outlet />
       </main>
 
       <footer className="footer">

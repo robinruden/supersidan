@@ -42,10 +42,11 @@ body {
 
 .main-content {
   flex: 1;
-  max-width: 960px;
+  /* max-width: 960px; */
+  height: 50rem;
   margin: 2rem auto;
   padding: 0 1rem 2rem;
-  background: white;
+  /* background: rgba(255, 0, 204, 0.208); */
 }
 
 .footer {
