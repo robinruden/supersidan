@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter} from 'react-router-dom'
 import './styles/pages.css'
 import './styles/layout.css'
+import './styles/home.css'
 import App from './App.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

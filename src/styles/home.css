@@ -1,0 +1,35 @@
+.home h1 {
+  text-align: center;
+}
+
+.home-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  overflow-x: auto;
+  align-items: stretch;
+}
+
+.card {
+  flex: 0 0 280px;
+  border: 1px solid #ddd;
+  padding: 1.25rem;
+  border-radius: 4px;
+}
+
+.page-section h1 {
+  margin-top: 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  background: #004c80;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
