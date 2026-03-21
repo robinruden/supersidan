@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <section className="home">
-      <h1>Välkommen till Supersidan</h1>
+      <h2>Välkommen till</h2>
+      <h1>Supersidan</h1>
 
       <div className="home-grid">
         <article className="card">
-          <h2>Körmusik av Gunnar Persson</h2>
+          <h3>Körmusik av Gunnar Persson</h3>
           <p>
             Här kan du presentera körhäftena, kort om att Gunnar har skrivit och gett ut körmusik
             för blandad kör osv.
@@ -16,7 +17,7 @@ export default function Home() {
         </article>
 
         <article className="card">
-          <h2>Den Magiske Super-G</h2>
+          <h3>Den Magiske Super-G</h3>
           <p>
             Kort teaser-text om trollerishowen: passar både vuxna och barn, mycket skratt osv.
           </p>
@@ -24,7 +25,7 @@ export default function Home() {
         </article>
 
         <article className="card">
-          <h2>Super-G Pianoflytt</h2>
+          <h3>Super-G Pianoflytt</h3>
           <p>
             Här kan du skriva samma text som på nuvarande sida om att flyttfirman har upphört.
           </p>
@@ -32,7 +33,7 @@ export default function Home() {
         </article>
 
         <article className="card">
-          <h2>Kalasorkestern</h2>
+          <h3>Kalasorkestern</h3>
           <p>
             Kort text om att Kalasorkestern spelar på fester och sätter fart på stämningen.
           </p>

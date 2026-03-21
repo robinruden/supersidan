@@ -1,23 +1,66 @@
-.home h1 {
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home h1, .home h2 {
   text-align: center;
 }
 
+.home h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.home h2 {
+  font-size: 2rem;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .home-grid {
+  
   display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   gap: 1.5rem;
   margin-top: 2rem;
+  background: #fff;
+  scroll-snap-align: start;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
   overflow-x: auto;
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: #c9d6e2;
+}
+
+.card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
   align-items: stretch;
 }
 
 .card {
-  flex: 0 0 280px;
-  min-height: 360px;
-  max-width: 10rem;
-  border: 1px solid #ddd;
-  padding: 1.25rem;
-  border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 280px;
+    min-height: 360px;
+    max-width: 10rem;
+    border: 1px solid #ddd;
+    padding: 1.25rem;
+    border-radius: 4px;
+}
+
+.card h2{
+    margin-top: 0;  
+    text-align: left;
+    
 }
 
 .page-section h1 {
