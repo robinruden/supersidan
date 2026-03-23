@@ -41,6 +41,7 @@ body {
 }
 
 .main-content {
+  background-color: rgb(184, 190, 6);
   flex: 1;
   /* max-width: 960px; */
   height: 50rem;
