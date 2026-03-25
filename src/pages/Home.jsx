@@ -10,8 +10,7 @@ export default function Home() {
         <article className="card">
           <h3>Körmusik av Gunnar Persson</h3>
           <p>
-            Här kan du presentera körhäftena, kort om att Gunnar har skrivit och gett ut körmusik
-            för blandad kör osv.
+           Gunnar Person har skrivit och givit ut körmusik för blandad kör.
           </p>
           <Link to="/kormusik" className="btn">Läs mer</Link>
         </article>

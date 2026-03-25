@@ -2,10 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .home h1, .home h2 {
   text-align: center;
+  color: var(--white);
+  font-family: 'Superfonten';
 }
 
 .home h1 {
@@ -21,16 +24,24 @@
 }
 
 .home-grid {
-  
+  color: var(--white);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 1.5rem;
   margin-top: 2rem;
-  background: #fff;
+  background: #000000;
+
   scroll-snap-align: start;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
   overflow-x: auto;
+
+
+
+
+  align-items: stretch;
+  margin-top: 8rem;
+}
 
 .card:hover {
   transform: translateY(-2px);
@@ -38,23 +49,32 @@
   /* border-color: #c9d6e2; */
 }
 
+
 .card .btn {
   margin-top: auto;
   align-self: flex-start;
 }
-  align-items: stretch;
-}
 
 .card {
+ /*  margin-top: 5rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 0 0 280px;
     min-height: 360px;
-    max-width: 10rem;
+    max-width: 14rem;
     border: 1px solid #ddd;
     padding: 1.25rem;
     border-radius: 4px;
+    
+}
+/* .card font{
+    color: var(--white);
+    
+} */
+
+.card h3{
+  font-family: 'Superfonten';
 }
 
 .card h2{
