@@ -1,7 +1,11 @@
 .home{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+
+  border: 2px solid pink;
     
 }
 
@@ -9,18 +13,21 @@
   text-align: center;
   color: var(--white);
   font-family: 'Superfonten';
+
+  border: 2px solid pink;
 }
 
 .home h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 6rem;
+  /* margin-bottom: 0.5rem; */
+  
 }
 
 .home h2 {
-  font-size: 2rem;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 4rem;
+  
+/*   padding-bottom: 0.5rem; */
+  /* margin-bottom: 0.5rem; */
 }
 
 .home-grid {
@@ -29,18 +36,15 @@
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 1.5rem;
-  margin-top: 2rem;
-  background: #000000;
-
+  
+  /* background: #000000; */
   scroll-snap-align: start;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
   overflow-x: auto;
-
-
-
-
   align-items: stretch;
-  margin-top: 8rem;
+  
+
+  border: 2px solid pink;
 }
 
 .card:hover {
@@ -66,6 +70,8 @@
     border: 1px solid #ddd;
     padding: 1.25rem;
     border-radius: 4px;
+
+    
     
 }
 /* .card font{
@@ -85,6 +91,7 @@
 
 .page-section h1 {
   margin-top: 0;
+  
 }
 
 .btn {
