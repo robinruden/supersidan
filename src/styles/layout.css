@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #f5f5f5;
+  /* background: #f5f5f5; */
 }
 
 .page {
@@ -15,7 +15,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background: #004c80;
+  background: var(--grey);
   height: 5rem;
   /* color: white; */
 }
