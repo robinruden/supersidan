@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <section className="home">
-      <h2>Välkommen till</h2>
-      <h1>Supersidan</h1>
+      <h2>Välkommen till Supersidan</h2>
+      <h1></h1>
 
       <div className="home-grid">
         <article className="card">
