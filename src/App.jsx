@@ -5,6 +5,10 @@ import DenMagiskeSuperG from './pages/DenMagiskeSuperG.jsx'
 import Kalasorkestern from './pages/Kalasorkestern.jsx'
 import Pianoflytt from './pages/Pianoflytt.jsx'
 import Kormusik from './pages/Kormusik.jsx'
+import './index.css'
+import './styles/pages.css'
+import './styles/layout.css'
+import './styles/home.css'
 
 function App() {
  return (
