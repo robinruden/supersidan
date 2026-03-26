@@ -10,8 +10,9 @@
 }
 
 .home h1, .home h2 {
+  margin-top: 8rem;
   text-align: center;
-  color: var(--white);
+  color: var(--yellow);
   font-family: 'Superfonten';
 
   border: 2px solid pink;
