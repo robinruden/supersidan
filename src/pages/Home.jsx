@@ -3,17 +3,21 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <section className="home">
-      <h2>Välkommen till Supersidan</h2>
-      <h1></h1>
+      <title>Supersidan - Hem</title>
+      <meta 
+        name="description" 
+        content="Välkommen till Supersidan! Här hittar du information om Gunnar Persson, hans körmusik, trollerishowen Den Magiske Super-G, pianoflytt och Kalasorkestern." />
+        <h2>Välkommen till</h2>
+        <h1>Supersidan</h1>
 
-      <div className="home-grid">
-        <article className="card">
-          <h3>Körmusik av Gunnar Persson</h3>
-          <p>
-           Gunnar Person har skrivit och givit ut körmusik för blandad kör.
-          </p>
-          <Link to="/kormusik" className="btn">Läs mer</Link>
-        </article>
+        <div className="home-grid">
+          <article className="card">
+            <h3>Körmusik av Gunnar Persson</h3>
+            <p>
+            Gunnar Person har skrivit och givit ut körmusik för blandad kör.
+            </p>
+            <Link to="/kormusik" className="btn">Läs mer</Link>
+          </article>
 
         <article className="card">
           <h3>Den Magiske Super-G</h3>
