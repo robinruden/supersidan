@@ -17,7 +17,6 @@ export default function Home() {
           Välkommen till Supersidan. Här hittar du information om Gunnars Perssons 
           körmusik, noter, trolleri, Kalasorkestern och kontakt för bokning.
         </p>
-        {/* <p>Välkommen till Supersidan!</p> */}
       
       <div className="home-grid">
         <article className="card">
