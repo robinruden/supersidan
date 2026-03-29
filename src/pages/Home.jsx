@@ -1,44 +1,53 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   return (
     <section className="home">
-      <title>Supersidan - Hem</title>
-      <meta 
-        name="description" 
-        content="Välkommen till Supersidan! Här hittar du information om Gunnar Persson, hans körmusik, trollerishowen Den Magiske Super-G, pianoflytt och Kalasorkestern." />
-        <h2>Välkommen till</h2>
-        <h1>Supersidan</h1>
+      <Helmet>
+        <title>Gunnar Persson - noter, musik, trolleri och Kalasorkestern</title>
+        <meta 
+          name="description" 
+          content="Välkommen till Gunnar Perssons Supersida med körmusik, noter, trolleri, Kalasorkestern och kontaktinformation för bokning." 
+        />
+      </Helmet>
 
-        <div className="home-grid">
-          <article className="card">
-            <h3>Körmusik av Gunnar Persson</h3>
-            <p>
-            Gunnar Person har skrivit och givit ut körmusik för blandad kör.
-            </p>
-            <Link to="/kormusik" className="btn">Läs mer</Link>
-          </article>
+        <h1>Gunnar Persson - noter, musik, trolleri och Kalasorkestern</h1>
+        <p className="intro">
+          Välkommen till Supersidan. Här hittar du information om Gunnars Perssons 
+          körmusik, noter, trolleri, Kalasorkestern och kontakt för bokning.
+        </p>
+        {/* <p>Välkommen till Supersidan!</p> */}
+      
+      <div className="home-grid">
+        <article className="card">
+          <h2>Körmusik av Gunnar Persson</h2>
+          <p>
+            Gunnar Persson har skrivit och givit ut körmusik för blandad kör.
+          </p>
+          <Link to="/kormusik" className="btn">Läs mer</Link>
+        </article>
 
         <article className="card">
-          <h3>Den Magiske Super-G</h3>
+          <h2>Den Magiske Super-G</h2>
           <p>
-            Kort teaser-text om trollerishowen: passar både vuxna och barn, mycket skratt osv.
+            En fartfylld trollerishow med humor och överraskningar för både barn och vuxna.
           </p>
           <Link to="/den-magiske-super-g" className="btn">Läs mer</Link>
         </article>
 
         <article className="card">
-          <h3>Super-G Pianoflytt</h3>
+          <h2>Super-G Pianoflytt</h2>
           <p>
-            Här kan du skriva samma text som på nuvarande sida om att flyttfirman har upphört.
+            Läs mer om Super-G Pianoflytt och information om verksamheten.Här kan du skriva samma text som på nuvarande sida om att flyttfirman har upphört.
           </p>
           <Link to="/pianoflytt" className="btn">Läs mer</Link>
         </article>
 
         <article className="card">
-          <h3>Kalasorkestern</h3>
+          <h2>Kalasorkestern</h2>
           <p>
-            Kort text om att Kalasorkestern spelar på fester och sätter fart på stämningen.
+            Kalasorkestern spelar på fester, tillställningar och sätter fart på stämningen.
           </p>
           <Link to="/kalasorkestern" className="btn">Läs mer</Link>
         </article>
