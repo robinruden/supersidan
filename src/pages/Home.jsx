@@ -24,6 +24,7 @@ export default function Home() {
           <p>
             Gunnar Persson har skrivit och givit ut körmusik för blandad kör.
           </p>
+          <img src="/assets/img/noter_1.png" alt="Körmusik av Gunnar Persson" className="card-image" />
           <Link to="/kormusik" className="btn">Läs mer</Link>
         </article>
 
