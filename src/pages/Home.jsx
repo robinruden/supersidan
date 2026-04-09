@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import noterImage from "../assets/img/noter_1.png";
+import noterImage from "../assets/img/noter-1.png";
 import supergImage from "../assets/img/superg.png";
-import pianoImage from "../assets/img/pianobild.png";
+import pianoImage from "../assets/img/piano.png";
+import kalasImage from "../assets/img/kalas.png";
 
 export default function Home() {
   return (
@@ -54,6 +55,7 @@ export default function Home() {
           <p>
             Kalasorkestern spelar på fester, tillställningar och sätter fart på stämningen.
           </p>
+          <img src={kalasImage} alt="Kalasorkestern" className="card-image" />
           <Link to="/kalasorkestern" className="btn">Läs mer</Link>
         </article>
       </div>
