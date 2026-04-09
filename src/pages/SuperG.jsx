@@ -1,4 +1,4 @@
-export default function DenMagiskeSuperG() {
+export default function SuperG() {
   return (
     <section className="page-section">
       <h1>Trolleri – Den Magiske Super-G</h1>
