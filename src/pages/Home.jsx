@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import noterImage from "../assets/img/noter_1.png";
+import supergImage from "../assets/img/superg.png";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
           <p>
             En fartfylld trollerishow med humor och överraskningar för både barn och vuxna.
           </p>
+          <img src={supergImage} alt="Den Magiske Super-G" className="card-image" />
           <Link to="/den-magiske-super-g" className="btn">Läs mer</Link>
         </article>
 
