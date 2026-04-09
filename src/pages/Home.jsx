@@ -25,37 +25,38 @@ export default function Home() {
       <div className="home-grid">
         <article className="card">
           <h2>Körmusik av Gunnar Persson</h2>
-          {/* <p>
-            Gunnar Persson har skrivit och givit ut körmusik för blandad kör.
-          </p> */}
+          
           <img src={noterImage} alt="Körmusik av Gunnar Persson" className="card-image" />
+          <p>
+            Gunnar Persson har skrivit och givit ut körmusik för blandad kör.
+          </p>
           <Link to="/kormusik" className="btn">Läs mer</Link>
         </article>
 
         <article className="card">
           <h2>Den Magiske Super-G</h2>
+          <img src={supergImage} alt="Den Magiske Super-G" className="card-image" />
           <p>
             En fartfylld trollerishow med humor och överraskningar för både barn och vuxna.
           </p>
-          <img src={supergImage} alt="Den Magiske Super-G" className="card-image" />
           <Link to="/den-magiske-super-g" className="btn">Läs mer</Link>
         </article>
 
         <article className="card">
           <h2>Super-G Pianoflytt</h2>
+          <img src={pianoImage} alt="Super-G Pianoflytt" className="card-image" />
           <p>
             Läs mer om Super-G Pianoflytt och information om verksamheten.Här kan du skriva samma text som på nuvarande sida om att flyttfirman har upphört.
           </p>
-          <img src={pianoImage} alt="Super-G Pianoflytt" className="card-image" />
           <Link to="/pianoflytt" className="btn">Läs mer</Link>
         </article>
 
         <article className="card">
           <h2>Kalasorkestern</h2>
+          <img src={kalasImage} alt="Kalasorkestern" className="card-image" />
           <p>
             Kalasorkestern spelar på fester, tillställningar och sätter fart på stämningen.
           </p>
-          <img src={kalasImage} alt="Kalasorkestern" className="card-image" />
           <Link to="/kalasorkestern" className="btn">Läs mer</Link>
         </article>
       </div>
