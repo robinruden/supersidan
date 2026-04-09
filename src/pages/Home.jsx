@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import noterImage from "../assets/img/noter_1.png";
 
 export default function Home() {
   return (
@@ -21,10 +22,10 @@ export default function Home() {
       <div className="home-grid">
         <article className="card">
           <h2>Körmusik av Gunnar Persson</h2>
-          <p>
+          {/* <p>
             Gunnar Persson har skrivit och givit ut körmusik för blandad kör.
-          </p>
-          <img src="/assets/img/noter_1.png" alt="Körmusik av Gunnar Persson" className="card-image" />
+          </p> */}
+          <img src={noterImage} alt="Körmusik av Gunnar Persson" className="card-image" />
           <Link to="/kormusik" className="btn">Läs mer</Link>
         </article>
 
