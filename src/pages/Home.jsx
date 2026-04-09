@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import noterImage from "../assets/img/noter_1.png";
 import supergImage from "../assets/img/superg.png";
+import pianoImage from "../assets/img/pianobild.png";
 
 export default function Home() {
   return (
@@ -44,6 +45,7 @@ export default function Home() {
           <p>
             Läs mer om Super-G Pianoflytt och information om verksamheten.Här kan du skriva samma text som på nuvarande sida om att flyttfirman har upphört.
           </p>
+          <img src={pianoImage} alt="Super-G Pianoflytt" className="card-image" />
           <Link to="/pianoflytt" className="btn">Läs mer</Link>
         </article>
 
