@@ -35,14 +35,17 @@
   color: var(--white);
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  
   flex-wrap: nowrap;
   gap: 1.5rem;
+  width: 95%;
   
   /* background: #000000; */
   scroll-snap-align: start;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
   overflow-x: auto;
-  align-items: stretch;
+  
   
 
   border: 2px solid pink;
@@ -83,6 +86,21 @@
     
     
 }
+
+.card h2{
+    margin-top: 0;  
+    text-align: left;
+    width: 13rem;
+    
+}
+
+.card img{
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  margin-bottom: 8rem;
+  border-radius: 4px;
+}
 /* .card font{
     color: var(--white);
     
@@ -92,11 +110,7 @@
   font-family: 'Superfonten';
 }
 
-.card h2{
-    margin-top: 0;  
-    text-align: left;
-    
-}
+
 
 .page-section h1 {
   margin-top: 0;
