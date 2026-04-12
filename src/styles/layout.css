@@ -12,7 +12,7 @@
   justify-content: space-between;
   padding: 1rem 2rem;
   background: var(--grey);
-  height: 5rem;
+  /* height: 5rem; */
   color: var(--yellow);
   /* color: white; */
 }
