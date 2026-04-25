@@ -48,7 +48,7 @@
   
   
 
-  border: 2px solid pink;
+ /*  border: 2px solid pink; */
 }
 
 .intro {
@@ -80,7 +80,8 @@
     flex: 0 0 280px; */
     /* height: 100%; */
     height: auto;
-   /*  max-width: 14rem; */
+   /*  width: 100%; */
+    max-width: 17rem;
     
     padding: 0.5rem;
    /*  border-radius: 4px; */
