@@ -5,7 +5,7 @@
 
 
 
-  border: 2px solid pink;
+ /*  border: 2px solid pink; */
     
 }
 
@@ -15,7 +15,7 @@
   color: var(--yellow);
   font-family: 'Superfonten';
 
-  border: 2px solid pink;
+  /* border: 2px solid pink; */
 }
 
 .home h1 {
@@ -81,7 +81,7 @@
     /* height: 100%; */
     height: auto;
    /*  width: 100%; */
-    max-width: 30rem;
+    max-width: 15rem;
     
     padding: 0.5rem;
    /*  border-radius: 4px; */
@@ -116,7 +116,7 @@
   /* object-position: 25% 1%; */
   
 
-  border: 2px solid pink;
+ /*  border: 2px solid pink; */
   
 }
 
