@@ -121,10 +121,10 @@
 
 .home-grid .card:first-child .card-image {
   /* width: 88%; */
-/*   height: auto; */
+  /* height: auto; */
   /* object-fit: contain; */
   /* object-position: center; */
-  /* margin-inline: auto; */
+  margin-inline: auto;
 }
 /* .card font{
     color: var(--white);
