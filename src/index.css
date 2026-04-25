@@ -25,12 +25,12 @@
 
 @font-face {
   font-family: Superfonten;
-  src: url(/public/fonts/IndieFlower-Regular.ttf);
+  src: url(/fonts/IndieFlower-Regular.ttf);
 }
 
 @font-face{
   font-family: 'Roboto';
-  src: url(/public/fonts/Roboto-VariableFont.ttf);
+  src: url(/fonts/Roboto-VariableFont.ttf);
 }
 
 
