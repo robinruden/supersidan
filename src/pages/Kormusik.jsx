@@ -3,11 +3,11 @@ export default function Kormusik() {
     <section className="page-section">
       <h1>Körmusik av Gunnar Persson</h1>
       <p>
-        Här beskriver du de fem häftena med körmusik, vilka typer av körer de passar för,
-        och hur man kan lyssna/köpa (t.ex. länkar, e-postbeställning).
+        Gunnar Persson har skrivit och givit ut körmusik för blandad kör.
+        Kontakta Gunnar för information om körhäftena och noterna.
       </p>
 
-      {/* Här kan du sen lägga in sektioner per häfte, spellistor eller länkar */}
+      <a href="mailto:gunnar.tonart@telia.com" className="btn">Fråga om körmusik och noter</a>
     </section>
   );
 }

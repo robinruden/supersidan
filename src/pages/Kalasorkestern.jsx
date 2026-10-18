@@ -4,8 +4,8 @@ export default function Kalasorkestern() {
       <h1>Kalasorkestern</h1>
       <h2>Musik till festen</h2>
       <p>
-        Här lägger du in texten om bandet – att de spelar på fester, sätter fart på dansgolvet,
-        och vilka typer av evenemang de passar för.
+        Kalasorkestern spelar på fester och tillställningar och sätter fart på stämningen.
+        Kontakta Bernt, Ove eller Gunnar för att prata om musik till din fest.
       </p>
 
       <p>Kontakta Kalasorkestern via telefonnumren längst ned på sidan.</p>

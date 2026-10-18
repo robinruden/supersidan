@@ -3,8 +3,8 @@ export default function Pianoflytt() {
     <section className="page-section">
       <h1>Super-G Pianoflytt</h1>
       <p>
-        Här kan du i princip återge meddelandet från nuvarande sida: att flyttfirman som älskade ditt
-        piano tyvärr har upphört osv.
+        Super-G Pianoflytt har upphört och tar inte längre emot flyttuppdrag.
+        Kontaktuppgifter till Gunnar Persson finns längst ned på sidan.
       </p>
     </section>
   );

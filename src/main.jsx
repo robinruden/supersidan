@@ -1,17 +1,19 @@
-/* import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client' */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter} from 'react-router-dom'
 import App from './App.jsx'
-import {HelmetProvider} from 'react-helmet-async'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = document.getElementById('root')
+const app = (
   <React.StrictMode>
     <BrowserRouter>
-      <HelmetProvider>
         <App />
-      </HelmetProvider>
     </BrowserRouter>
   </React.StrictMode>
 )
+
+if (root.hasChildNodes()) {
+  ReactDOM.hydrateRoot(root, app)
+} else {
+  ReactDOM.createRoot(root).render(app)
+}

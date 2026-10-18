@@ -5,8 +5,8 @@ export default function SuperG() {
 
       <h2>Vuxenföreställningar</h2>
       <p>
-        Här lägger du in texten från nuvarande sidan om vuxenshowen: deltagande publik,
-        klassiska korttrick, skratt, överraskningar osv.
+        Den Magiske Super-G bjuder på trolleri med humor och överraskningar för vuxna.
+        Kontakta Gunnar Persson för att diskutera en föreställning till ditt evenemang.
       </p>
       <ul>
         <li>Föreställningen kan anpassas efter önskemål</li>
@@ -17,8 +17,8 @@ export default function SuperG() {
 
       <h2>Barnföreställningar</h2>
       <p>
-        Här lägger du in barn-show-texten: barnen får vara med och trolla, mycket skratt och värme,
-        känslan av att inte förstå hur tricken går till osv.
+        En trolleriföreställning för barn med humor och överraskningar.
+        Programmet anpassas efter barnens ålder.
       </p>
       <ul>
         <li>Anpassas efter barnens ålder</li>
