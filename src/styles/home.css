@@ -45,6 +45,7 @@
   scroll-snap-align: start;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
   overflow-x: auto;
+  padding: 6px 4px 24px;
   
   
 
@@ -53,8 +54,39 @@
 
 @media (max-width: 768px) {
   .home-grid {
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .home-grid .card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    align-items: start;
+    min-width: 0;
+    max-width: none;
+    overflow-wrap: anywhere;
+  }
+
+  .home-grid .card h2 {
+    margin: 0;
+    height: auto;
+    font-size: clamp(1.25rem, 4vw, 2rem);
+  }
+
+  .home-grid .card p {
+    width: 100%;
+  }
+
+  .home-grid .card img {
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+
+  .home-grid .card .btn {
+    align-self: end;
+    justify-self: start;
   }
 }
 
@@ -66,19 +98,30 @@
   font-family: superfonten;
 }
 
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  /* border-color: #c9d6e2; */
-}
-
-
 .card .btn {
   margin-top: auto;
   align-self: flex-start;
 }
 
+.card .btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.card:focus-within {
+  outline: 2px solid var(--yellow);
+  outline-offset: 3px;
+}
+
 .card {
+    position: relative;
+    background-color: #000;
+    border: 1px solid rgba(255, 192, 107, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
  /*  margin-top: 5rem; */
     display: flex;
     flex-direction: column;
@@ -94,12 +137,13 @@
    /*  border-radius: 4px; */
 
     
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  border-color: var(--yellow);
+  box-shadow: 0 8px 24px rgba(255, 192, 107, 0.15);
 
   cursor: pointer;
   /* border-color: #c9d6e2; */
