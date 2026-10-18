@@ -141,3 +141,75 @@
 @media (prefers-reduced-motion: reduce) {
   .detail-page .btn { transition: none; }
 }
+
+/* Körhäften: omslagsöversikt och en läsbar sektion per verk. */
+.choir-catalog {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #000;
+  border: 1px solid rgba(255, 192, 107, 0.4);
+  border-radius: 14px;
+  scroll-margin-top: 1.5rem;
+}
+
+.choir-cover-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: var(--yellow);
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  border-radius: 6px;
+}
+
+.choir-cover-link img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  transition: transform 180ms ease;
+}
+
+.choir-cover-link:hover { text-decoration: underline; }
+.choir-cover-link:hover img { transform: translateY(-4px); }
+.choir-works { display: grid; gap: 1.5rem; }
+
+.choir-work {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.5fr);
+  align-items: start;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  scroll-margin-top: 1.5rem;
+}
+
+.choir-anchor { position: absolute; top: 0; scroll-margin-top: 1.5rem; }
+.choir-work-cover img { display: block; width: 100%; height: auto; }
+.choir-work-copy { min-width: 0; }
+.choir-credit { color: #d3c6b5; font-size: 0.9rem; }
+.choir-work h3 { color: var(--yellow); font-size: 1rem; margin: 1.5rem 0 0.75rem; }
+.choir-songs { margin: 0 0 1.5rem; }
+.choir-songs > div { padding: 0.65rem 0; border-bottom: 1px solid rgba(255, 192, 107, 0.15); }
+.choir-songs dt { color: var(--yellow); font-weight: 600; }
+.choir-songs dd { margin: 0.15rem 0 0; }
+.choir-work .detail-actions { margin-top: 1.5rem; }
+.choir-top-link { display: inline-block; margin-top: 1.5rem; padding: 0.4rem 0; color: var(--yellow); }
+
+@media (max-width: 900px) {
+  .choir-catalog { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .choir-catalog { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 1rem; }
+  .choir-work { grid-template-columns: minmax(0, 1fr); }
+  .choir-work-cover img { max-width: 280px; margin-inline: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .choir-cover-link img { transition: none; }
+  .choir-cover-link:hover img { transform: none; }
+}
