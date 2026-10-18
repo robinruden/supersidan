@@ -1,8 +1,13 @@
+import DetailPage from '../components/DetailPage.jsx'
+import image from '../assets/img/superg.png'
+
 export default function SuperG() {
   return (
-    <section className="page-section">
-      <h1>Trolleri – Den Magiske Super-G</h1>
-
+    <DetailPage title="Den Magiske Super-G" label="Trolleri för stora och små"
+      intro="Magi, humor och överraskningar med Gunnar Persson. En föreställning för barn eller vuxna, anpassad efter publiken."
+      image={image} imageAlt="Den Magiske Super-G">
+      <div className="detail-columns">
+      <section className="detail-panel">
       <h2>Vuxenföreställningar</h2>
       <p>
         Den Magiske Super-G bjuder på trolleri med humor och överraskningar för vuxna.
@@ -15,6 +20,8 @@ export default function SuperG() {
         <li>Ingen publik bakom scenen, inga speglar bakom scenen</li>
       </ul>
 
+      </section>
+      <section className="detail-panel">
       <h2>Barnföreställningar</h2>
       <p>
         En trolleriföreställning för barn med humor och överraskningar.
@@ -27,9 +34,16 @@ export default function SuperG() {
         <li>Ingen publik bakom scenen, inga speglar bakom scenen</li>
       </ul>
 
-      <a href="mailto:gunnar.tonart@telia.com" className="btn">
+      </section>
+      </div>
+      <section className="detail-panel detail-contact">
+      <h2>Låt magin bli en del av festen</h2>
+      <p>Kontakta Gunnar för frågor om program och bokning.</p>
+      <div className="detail-actions"><a href="mailto:gunnar.tonart@telia.com" className="btn">
         Boka Super-G
       </a>
-    </section>
+      <a href="tel:+46707682146" className="btn detail-secondary">Ring Gunnar</a></div>
+      </section>
+    </DetailPage>
   );
 }
