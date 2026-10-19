@@ -169,7 +169,7 @@
 .choir-cover-link img {
   display: block;
   width: 100%;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 4 / 5;
   object-fit: contain;
   transition: transform 180ms ease;
 }
@@ -188,7 +188,13 @@
 }
 
 .choir-anchor { position: absolute; top: 0; scroll-margin-top: 1.5rem; }
-.choir-work-cover img { display: block; width: 100%; height: auto; }
+.choir-work-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+}
 .choir-work-copy { min-width: 0; }
 .choir-credit { color: #d3c6b5; font-size: 0.9rem; }
 .choir-work h3 { color: var(--yellow); font-size: 1rem; margin: 1.5rem 0 0.75rem; }
