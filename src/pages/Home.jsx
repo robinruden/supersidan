@@ -22,7 +22,7 @@ export default function Home() {
           <p>
             Gunnar Persson har skrivit och givit ut körmusik för blandad kör.
           </p>
-          <Link to="/k-rmusik.html" className="btn" aria-label="Läs mer om körmusik av Gunnar Persson">Läs mer</Link>
+          <Link to="/k-rmusik.html" className="btn" aria-label="Läs mer om körmusik av Gunnar Persson">Läs mer om körmusik av Gunnar Persson</Link>
         </article>
 
         <article className="card">
@@ -31,7 +31,7 @@ export default function Home() {
           <p>
             En fartfylld trollerishow med humor och överraskningar för både barn och vuxna.
           </p>
-          <Link to="/den-magiske-super-g.html" className="btn" aria-label="Läs mer om Den Magiske Super-G">Läs mer</Link>
+          <Link to="/den-magiske-super-g.html" className="btn" aria-label="Läs mer om Den Magiske Super-G">Läs mer om den Magiske Super-G</Link>
         </article>
 
         <article className="card">
@@ -40,7 +40,7 @@ export default function Home() {
           <p>
             Super-G Pianoflytt har upphört. Här hittar du information och kontaktuppgifter.
           </p>
-          <Link to="/pianoflytt.html" className="btn" aria-label="Läs mer om Super-G Pianoflytt">Läs mer</Link>
+          <Link to="/pianoflytt.html" className="btn" aria-label="Läs mer om Super-G Pianoflytt">Läs mer om Super-G:s pianoflytt</Link>
         </article>
 
         <article className="card">
@@ -49,7 +49,7 @@ export default function Home() {
           <p>
             Kalasorkestern spelar på fester, tillställningar och sätter fart på stämningen.
           </p>
-          <Link to="/kalasorkestern.html" className="btn" aria-label="Läs mer om Kalasorkestern">Läs mer</Link>
+          <Link to="/kalasorkestern.html" className="btn" aria-label="Läs mer om Kalasorkestern">Läs mer om Kalasorkestern</Link>
         </article>
       </div>
     </section>

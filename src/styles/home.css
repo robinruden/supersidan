@@ -104,7 +104,6 @@
 
 @media (hover: hover ) and (pointer: fine) {
   .card:hover .btn{
-    transform: translateY(-4px);
     border-color: var(--yellow);
     box-shadow: 0 8px 24px rgba(255, 192, 107, 0.15);
     cursor: pointer;

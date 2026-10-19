@@ -163,7 +163,10 @@
   text-decoration: none;
   font-size: 0.9rem;
   line-height: 1.4;
-  border-radius: 6px;
+  padding: 0.65rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
 }
 
 .choir-cover-link img {
@@ -174,8 +177,19 @@
   transition: transform 180ms ease;
 }
 
-.choir-cover-link:hover { text-decoration: underline; }
-.choir-cover-link:hover img { transform: translateY(-4px); }
+.choir-cover-link:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .choir-cover-link:hover {
+    transform: translateY(-4px) scale(1.04);
+    border-color: var(--yellow);
+    background-color: rgba(255, 192, 107, 0.06);
+    box-shadow: 0 8px 24px rgba(255, 192, 107, 0.15);
+  }
+}
 .choir-works { display: grid; gap: 1.5rem; }
 
 .choir-work {
@@ -216,6 +230,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .choir-cover-link { transition: none; }
+  .choir-cover-link:hover { transform: none; }
   .choir-cover-link img { transition: none; }
   .choir-cover-link:hover img { transform: none; }
 }
