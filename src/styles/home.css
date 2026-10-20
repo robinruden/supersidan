@@ -150,6 +150,13 @@
   transition: background-color 180ms ease, box-shadow 180ms ease;
 }
 
+@media (min-width: 1064px) {
+  .home-grid .card .btn {
+    height: 5.5rem;
+    width: 100%;
+  }
+}
+
 .card:hover .btn,
 .card .btn:focus-visible {
   background: #ffd49b;
@@ -184,7 +191,7 @@
     /* height: 100%; */
     height: auto;
    /*  width: 100%; */
-    max-width: 15rem;
+    max-width: 16rem;
     
     padding: 0.5rem;
    /*  border-radius: 4px; */
