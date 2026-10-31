@@ -33,16 +33,7 @@ export default function Home() {
           </p>
           <Link to="/den-magiske-super-g.html" className="btn" aria-label="Läs mer om Den Magiske Super-G">Läs mer om den Magiske Super-G</Link>
         </article>
-
-        <article className="card">
-          <h2>Super-G Pianoflytt</h2>
-          <img src={pianoImage} alt="Super-G Pianoflytt" className="card-image" />
-          <p>
-            Super-G Pianoflytt har upphört. Här hittar du information och kontaktuppgifter.
-          </p>
-          <Link to="/pianoflytt.html" className="btn" aria-label="Läs mer om Super-G Pianoflytt">Läs mer om Super-G:s pianoflytt</Link>
-        </article>
-
+        
         <article className="card">
           <h2>Kalasorkestern i Stockholm</h2>
           <img src={kalasImage} alt="Kalasorkestern" className="card-image" />
@@ -50,6 +41,15 @@ export default function Home() {
             Kalasorkestern spelar på fester, tillställningar och sätter fart på stämningen.
           </p>
           <Link to="/kalasorkestern.html" className="btn" aria-label="Läs mer om Kalasorkestern">Läs mer om Kalasorkestern</Link>
+        </article>
+        
+        <article className="card">
+          <h2>Super-G Pianoflytt</h2>
+          <img src={pianoImage} alt="Super-G Pianoflytt" className="card-image" />
+          <p>
+            Super-G Pianoflytt har upphört. Här hittar du information och kontaktuppgifter.
+          </p>
+          <Link to="/pianoflytt.html" className="btn" aria-label="Läs mer om Super-G Pianoflytt">Läs mer om Super-G:s pianoflytt</Link>
         </article>
       </div>
     </section>

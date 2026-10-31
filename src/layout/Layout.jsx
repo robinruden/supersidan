@@ -20,7 +20,6 @@ export default function Layout() {
 
         <h3>Kalasorkestern</h3>
         <p>Bernt – 070-090 52 03</p>
-        <p>Ove – 070-529 59 37</p>
         <p>Gunnar – 070-768 21 46</p>
       </footer>
     </div>

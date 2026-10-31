@@ -112,3 +112,7 @@
   font-size: 0.95rem;
   font-family: "Superfonten";
 }
+
+.footer a {
+  color: inherit;
+}
