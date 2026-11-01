@@ -35,7 +35,7 @@ export default function Home() {
         </article>
         
         <article className="card">
-          <h2>Lilla Kalasorkestern i Stockholm</h2>
+          <h2>Lilla Kalasorkestern</h2>
           <img src={kalasImage} alt="Kalasorkestern" className="card-image" />
           <p>
             Lilla Kalasorkestern spelar på fester och tillställningar och sätter fart på kalaset.
