@@ -210,12 +210,12 @@
   /* height: 3.5rem; */
 }
 
-/* @media (min-width: 1064px) {
+@media (min-width: 1064px) {
   .home-grid .card .btn {
-    height: 5.5rem;
+    height: 5rem;
     width: 100%;
   }
-} */
+}
 
 @media (max-width: 1063px) {
   .home-grid {
@@ -274,13 +274,13 @@
     justify-self: center;
   } */
 
-/* @media (min-width: 1063px) {
+@media (min-width: 1063px) {
     .home-grid .card img {
       padding: 1rem;
       aspect-ratio: auto;
       object-fit: cover;
   }
-} */
+}
 
 
 @media (hover: hover ) and (pointer: fine) {

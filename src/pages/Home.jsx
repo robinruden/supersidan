@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <section className="home">
 
-        <h1>Gunnar Persson - noter, musik, trolleri och Kalasorkestern</h1>
+        <h1>Gunnar Persson - noter, musik, trolleri och Lilla Kalasorkestern</h1>
         <p className="intro">
           Välkommen till Supersidan. Här hittar du information om Gunnar Perssons 
-          körmusik, noter, trolleri, Kalasorkestern och kontakt för bokning.
+          körmusik, noter, trolleri, Lilla Kalasorkestern och kontakt för bokning.
         </p>
       
       <div className="home-grid">
@@ -35,10 +35,10 @@ export default function Home() {
         </article>
         
         <article className="card">
-          <h2>Kalasorkestern i Stockholm</h2>
+          <h2>Lilla Kalasorkestern i Stockholm</h2>
           <img src={kalasImage} alt="Kalasorkestern" className="card-image" />
           <p>
-            Kalasorkestern spelar på fester, tillställningar och sätter fart på stämningen.
+            Lilla Kalasorkestern spelar på fester och tillställningar och sätter fart på kalaset.
           </p>
           <Link to="/kalasorkestern.html" className="btn" aria-label="Läs mer om Kalasorkestern">Läs mer om Kalasorkestern</Link>
         </article>
