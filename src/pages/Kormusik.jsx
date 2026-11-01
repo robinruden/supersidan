@@ -13,7 +13,7 @@ const works = [
     subtitle: 'Tre sånger för blandad kör a cappella', credit: 'Text och musik: Gunnar Persson',
     paragraphs: ['En sångcykel som följer dagens skiftningar i ord och ton. Arrangemangen är lättsjungna, med rytmiska utmaningar och täta klanger att arbeta med.'],
     songs: [
-      ['Morgon', 'Från natt och gryning till en ljus försommardag.'],
+      ['Morgon', 'Från gryning till en ljus försommardag.'],
       ['Eftermiddagslur', 'Sommarlediga basar drömmer om att få ligga kvar i hängmattan.'],
       ['Kväll', 'En nocturne där naturen tystnar och dagen blir till natt.'],
     ],
@@ -48,7 +48,7 @@ const works = [
     subtitle: 'Tre visor för Lucia, advent och jul', credit: 'Text och musik: Gunnar Persson',
     paragraphs: ['Trestämmiga arrangemang för SAB med harmonianalys, särskilt lämpade för skolkörer. Titelvisan är också känd som Låt det brinna och finns i tvåstämmig version i Barnpsalmboken och andra sångböcker.'],
     songs: [
-      ['Ljuset i advent (Låt det brinna)', 'Om tro, hopp, kärlek och att hålla lågan levande.'],
+      ['Ljuset i advent', 'Om tro, hopp, kärlek och att hålla lågan levande.'],
       ['Lucia', 'En hyllning till Lucia och sångens förmåga att förena människor.'],
       ['För dig är en stjärna tänd', 'En trösterik sång med popkaraktär.'],
     ],
