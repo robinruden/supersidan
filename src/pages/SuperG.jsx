@@ -3,7 +3,9 @@ import image from '../assets/img/superg.png'
 
 export default function SuperG() {
   return (
-    <DetailPage title="Den Magiske Super-G" label="Trolleri för stora och små"
+    <DetailPage 
+      title="Den Magiske Super‑G"
+      label="Trolleri för stora och små"
       intro="Magi, humor och överraskningar med Gunnar Persson. En föreställning för barn eller vuxna, anpassad efter publiken."
       image={image} imageAlt="Den Magiske Super-G">
       <div className="detail-columns">
