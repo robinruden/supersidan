@@ -1,7 +1,7 @@
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import App from './App.jsx'
-export { pages, siteUrl } from './seo.js'
+export { pages, siteUrl, noindex } from './seo.js'
 
 // React 19 places titles, metadata and canonical links in the document head.
 export function render(path, scripts, styles) {

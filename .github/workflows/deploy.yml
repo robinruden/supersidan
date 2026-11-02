@@ -1,4 +1,4 @@
-name: Publish to one.com
+name: Publish test site to one.com
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: one-com-production
+  group: one-com-test
   cancel-in-progress: false
 
 jobs:
@@ -17,7 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      VITE_SITE_URL: ${{ vars.SITE_URL || 'https://supersidan.se' }}
+      VITE_SITE_URL: https://nyasidan.supersidan.se
+      VITE_NOINDEX: 'true'
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v7
@@ -35,6 +36,11 @@ jobs:
           SFTP_PORT: ${{ secrets.SFTP_PORT }}
           SFTP_USER: ${{ secrets.SFTP_USER }}
           SSHPASS: ${{ secrets.SFTP_PASSWORD }}
-          SFTP_PATH: ${{ secrets.SFTP_PATH }}
+          SFTP_PATH: ${{ secrets.SFTP_TEST_PATH }}
           SFTP_KNOWN_HOSTS: ${{ secrets.SFTP_KNOWN_HOSTS }}
-        run: bash scripts/deploy-sftp.sh
+        run: |
+          if [[ "${SFTP_PATH%/}" != '/customers/c/8/c/cx4yqvxhn/webroots/7c27d013' ]]; then
+            echo 'SFTP_TEST_PATH must point to the verified webroot for nyasidan.supersidan.se'
+            exit 1
+          fi
+          bash scripts/deploy-sftp.sh

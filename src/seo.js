@@ -1,5 +1,6 @@
 // Set VITE_SITE_URL to the final public origin before publishing.
 export const siteUrl = (import.meta.env.VITE_SITE_URL || 'https://supersidan.se').replace(/\/$/, '')
+export const noindex = import.meta.env.VITE_NOINDEX === 'true'
 
 export const pages = {
   '/': {
