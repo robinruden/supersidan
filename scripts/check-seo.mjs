@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 
-const { pages, siteUrl } = await import(pathToFileURL(resolve('node_modules/.cache/supersidan-prerender/entry-server.js')))
+const { pages, siteUrl, noindex } = await import(pathToFileURL(resolve('node_modules/.cache/supersidan-prerender/entry-server.js')))
 const sitemap = await readFile('dist/sitemap.xml', 'utf8')
 const titles = new Set()
 for (const path of Object.keys(pages)) {
@@ -20,7 +20,7 @@ for (const path of Object.keys(pages)) {
   assert.equal((body.match(/<h1[ >]/g) || []).length, 1)
   assert(body.includes('gunnar.tonart@telia.com'), `${path}: rendered contact`)
   assert(!html.includes('Här lägger du') && !html.includes('Här beskriver du'))
-  assert(!head.includes('noindex'))
+  assert.equal(head.includes('name="robots" content="noindex"'), noindex, `${path}: indexing mode`)
   assert(sitemap.includes(`<loc>${siteUrl}${path}</loc>`))
   for (const asset of html.matchAll(/(?:src|href)="(\/assets\/[^"?#]+)"/g)) {
     await readFile(`dist${asset[1]}`)

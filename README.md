@@ -48,8 +48,11 @@ slutlig serverkonfiguration.
 ## Automatisk publicering till one.com
 
 `.github/workflows/deploy.yml` bygger och kontrollerar sidan vid push till `main`
-och kan också startas via GitHub → Actions → Publish to one.com → Run workflow.
+och kan också startas via GitHub → Actions → Publish test site to one.com → Run workflow.
 Efter godkända kontroller laddas innehållet i `dist/` upp via SFTP.
+Pipelinen publicerar nu endast testversionen på `https://nyasidan.supersidan.se`
+med `noindex` på alla sidor. Det hindrar indexering men är inget lösenordsskydd.
+Skarp publicering konfigureras separat när testversionen är godkänd.
 
 Aktivera SFTP i one.coms kontrollpanel under Hosting settings → SSH & SFTP.
 SFTP-lösenordet är separat från kontrollpanelens inloggning.
@@ -66,7 +69,7 @@ följande repository secrets:
 | `SFTP_PORT` | Port från one.com (22 om den utelämnas) |
 | `SFTP_USER` | SFTP-användarnamn från one.com |
 | `SFTP_PASSWORD` | SFTP-lösenord |
-| `SFTP_PATH` | Befintlig webbrot, som den visas via SFTP |
+| `SFTP_TEST_PATH` | `/customers/c/8/c/cx4yqvxhn/webroots/7c27d013` (verifierad via SFTP för `nyasidan.supersidan.se`) |
 | `SFTP_KNOWN_HOSTS` | Serverns verifierade SSH-nyckel i known_hosts-format |
 
 För `SFTP_KNOWN_HOSTS`: använd värdens post från din lokala
@@ -75,9 +78,10 @@ Alternativt hämta posten med `ssh-keyscan -p 22 SERVERNAMN`, jämför nyckelns
 fingeravtryck med uppgifter från one.com och spara den verifierade posten.
 Ändra porten i kommandot om one.com anger en annan port.
 
-Om den publika domänen skiljer sig från `https://supersidan.se`, lägg till
-repository variable `SITE_URL` under Variables med rätt HTTPS-adress utan
-avslutande snedstreck.
+Testadressen är angiven i workflow-filen. Pipelinen avbryter om testmappens
+sökväg inte matchar den verifierade webbroten ovan. Den tidigare mappen
+`/webroots/www/nyasidan` används inte. För lokal testbyggnad kan du köra
+`VITE_SITE_URL=https://nyasidan.supersidan.se VITE_NOINDEX=true npm run build`.
 
 Uppladdningen ersätter filer med samma namn men tar inte bort gamla filer.
 Tillgångar laddas upp före HTML, men publiceringen är inte atomisk: en avbruten

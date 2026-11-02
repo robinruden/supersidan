@@ -1,5 +1,5 @@
 import { useLocation } from 'react-router-dom'
-import { pages, siteUrl } from '../seo.js'
+import { pages, siteUrl, noindex } from '../seo.js'
 
 export default function Seo() {
   const { pathname } = useLocation()
@@ -13,6 +13,7 @@ export default function Seo() {
     <>
       <title>{page.title}</title>
       <meta name="description" content={page.description} />
+      {noindex && <meta name="robots" content="noindex" />}
       <link rel="canonical" href={url} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="sv_SE" />
