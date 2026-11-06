@@ -58,8 +58,8 @@ Alternativt pushar du en ny tagg med prefixet `production-` på den commit som
 ska publiceras. Vanliga pushar till `main` uppdaterar enbart testversionen.
 
 Produktionsbygget använder `https://supersidan.se` och tillåter indexering.
-Samma SFTP-inloggning används, men målmappen är huvuddomänens route:
-`/customers/c/8/c/cx4yqvxhn/webroots/by-route/supersidan.se_`.
+Samma SFTP-inloggning används, men målmappen är huvuddomänens verifierade webbrot:
+`/customers/c/8/c/cx4yqvxhn/webroots/www`.
 Före uppladdning hämtas de fem befintliga HTML-sidorna och eventuella
 `.htaccess`, `robots.txt`, `sitemap.xml` och `404.html`. Kopian sparas som
 en GitHub Actions-artifact i 30 dagar. Det kompletterar din fullständiga
