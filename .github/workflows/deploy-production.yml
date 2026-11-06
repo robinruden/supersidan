@@ -36,7 +36,7 @@ jobs:
           SFTP_PORT: ${{ secrets.SFTP_PORT }}
           SFTP_USER: ${{ secrets.SFTP_USER }}
           SSHPASS: ${{ secrets.SFTP_PASSWORD }}
-          SFTP_PATH: /customers/c/8/c/cx4yqvxhn/webroots/by-route/supersidan.se_
+          SFTP_PATH: /customers/c/8/c/cx4yqvxhn/webroots/www
           SFTP_KNOWN_HOSTS: ${{ secrets.SFTP_KNOWN_HOSTS }}
           DEPLOY_BACKUP_ONLY: 'true'
         run: bash scripts/deploy-sftp.sh
@@ -54,6 +54,6 @@ jobs:
           SFTP_PORT: ${{ secrets.SFTP_PORT }}
           SFTP_USER: ${{ secrets.SFTP_USER }}
           SSHPASS: ${{ secrets.SFTP_PASSWORD }}
-          SFTP_PATH: /customers/c/8/c/cx4yqvxhn/webroots/by-route/supersidan.se_
+          SFTP_PATH: /customers/c/8/c/cx4yqvxhn/webroots/www
           SFTP_KNOWN_HOSTS: ${{ secrets.SFTP_KNOWN_HOSTS }}
         run: bash scripts/deploy-sftp.sh
