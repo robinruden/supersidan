@@ -1,0 +1,59 @@
+name: Publish supersidan.se
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ['production-*']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: one-com-production
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      VITE_SITE_URL: https://supersidan.se
+      VITE_NOINDEX: 'false'
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check:seo
+      - name: Install SFTP password helper
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+      - name: Back up current pages
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SSHPASS: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_PATH: /customers/c/8/c/cx4yqvxhn/webroots/by-route/supersidan.se_
+          SFTP_KNOWN_HOSTS: ${{ secrets.SFTP_KNOWN_HOSTS }}
+          DEPLOY_BACKUP_ONLY: 'true'
+        run: bash scripts/deploy-sftp.sh
+      - name: Save backup before publishing
+        uses: actions/upload-artifact@v4
+        with:
+          name: supersidan-before-${{ github.run_id }}
+          path: deployment-backup/
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 30
+      - name: Publish built website
+        env:
+          SFTP_HOST: ${{ secrets.SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.SFTP_PORT }}
+          SFTP_USER: ${{ secrets.SFTP_USER }}
+          SSHPASS: ${{ secrets.SFTP_PASSWORD }}
+          SFTP_PATH: /customers/c/8/c/cx4yqvxhn/webroots/by-route/supersidan.se_
+          SFTP_KNOWN_HOSTS: ${{ secrets.SFTP_KNOWN_HOSTS }}
+        run: bash scripts/deploy-sftp.sh
