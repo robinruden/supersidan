@@ -52,7 +52,21 @@ och kan också startas via GitHub → Actions → Publish test site to one.com �
 Efter godkända kontroller laddas innehållet i `dist/` upp via SFTP.
 Pipelinen publicerar nu endast testversionen på `https://nyasidan.supersidan.se`
 med `noindex` på alla sidor. Det hindrar indexering men är inget lösenordsskydd.
-Skarp publicering konfigureras separat när testversionen är godkänd.
+Skarp publicering sker separat med `.github/workflows/deploy-production.yml`:
+GitHub → Actions → Publish supersidan.se → Run workflow (välj `main`).
+Alternativt pushar du en ny tagg med prefixet `production-` på den commit som
+ska publiceras. Vanliga pushar till `main` uppdaterar enbart testversionen.
+
+Produktionsbygget använder `https://supersidan.se` och tillåter indexering.
+Samma SFTP-inloggning används, men målmappen är huvuddomänens route:
+`/customers/c/8/c/cx4yqvxhn/webroots/by-route/supersidan.se_`.
+Före uppladdning hämtas de fem befintliga HTML-sidorna och eventuella
+`.htaccess`, `robots.txt`, `sitemap.xml` och `404.html`. Kopian sparas som
+en GitHub Actions-artifact i 30 dagar. Det kompletterar din fullständiga
+backup från one.com; bilder och andra gamla mappar ingår inte i denna kopia.
+Den befintliga serverkonfigurationen och gamla mediamappar lämnas kvar.
+Publicera inte den gamla sidan från Website Builder efter bytet, eftersom
+det kan ersätta den nya sidans filer.
 
 Aktivera SFTP i one.coms kontrollpanel under Hosting settings → SSH & SFTP.
 SFTP-lösenordet är separat från kontrollpanelens inloggning.
