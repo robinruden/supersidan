@@ -72,15 +72,12 @@
   min-height: 44px;
   padding: 0.5rem 0.75rem;
   background: transparent;
-  border: 1px solid var(--yellow);
+  border: 0px solid var(--yellow);
   border-radius: 10px;
   color: var(--yellow);
   font: inherit;
   cursor: pointer;
-}
-
-.nav-toggle:hover {
-  background: rgba(255, 192, 107, 0.1);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav a:focus-visible,
@@ -88,6 +85,9 @@
   outline: 2px solid var(--yellow);
   outline-offset: 4px;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
