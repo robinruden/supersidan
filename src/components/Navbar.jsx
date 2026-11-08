@@ -27,7 +27,7 @@ export default function NavBar() {
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
           <path d={isOpen ? "M6 6l12 12M6 18L18 6" : "M4 6h16M4 12h16M4 18h16"} />
         </svg>
-        <span>{isOpen ? "Stäng" : "Meny"}</span>
+        <span>{isOpen ? "" : ""}</span>
       </button>
       <ul id="nav-links" className={`nav-links${isOpen ? " is-open" : ""}`} onClick={() => setIsOpen(false)}>
         <li><NavLink to="/" end>Hem</NavLink></li>
