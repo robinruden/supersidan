@@ -64,7 +64,27 @@
   border-color: var(--yellow);
 }
 
-.nav a:focus-visible {
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: 1px solid var(--yellow);
+  border-radius: 10px;
+  color: var(--yellow);
+  font: inherit;
+  cursor: pointer;
+}
+
+.nav-toggle:hover {
+  background: rgba(255, 192, 107, 0.1);
+}
+
+.nav a:focus-visible,
+.nav-toggle:focus-visible {
   outline: 2px solid var(--yellow);
   outline-offset: 4px;
   border-radius: 10px;
@@ -72,16 +92,31 @@
 
 @media (max-width: 768px) {
   .nav {
-    flex-direction: column;
+    justify-content: space-between;
     gap: 0.75rem;
   }
 
+  .nav-logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
   .nav-links {
-    justify-content: center;
+    display: none;
+    flex-direction: column;
+    flex-basis: 100%;
     width: 100%;
   }
 
+  .nav-links.is-open {
+    display: flex;
+  }
+
   .nav-links a {
+    justify-content: flex-start;
     padding: 0.5rem 0.65rem;
     font-size: 1rem;
   }
