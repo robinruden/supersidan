@@ -12,7 +12,7 @@ export default function Layout() {
   return (
     <div className="page">
       <header>
-        <NavBar />
+        <NavBar key={pathname} />
       </header>
 
       <main className="main-content">
